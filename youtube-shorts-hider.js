@@ -68,8 +68,6 @@ function hideYouTubeShorts() {
 }
 
 // Run on page load and when new content is loaded (e.g., scrolling)
-document.addEventListener("DOMContentLoaded", () => {
-  hideYouTubeShorts();
-  const observer = new MutationObserver(hideYouTubeShorts);
-  observer.observe(document.body, { childList: true, subtree: true });
-});
+hideYouTubeShorts();
+const observer = new MutationObserver(hideYouTubeShorts);
+observer.observe(document.body, { childList: true, subtree: true });

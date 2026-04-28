@@ -10,7 +10,7 @@
     {
       "matches": ["*://*.youtube.com/*"],
       "js": ["youtube-shorts-hider.js"],
-      "run_at": "document_start"
+      "run_at": "document_idle"
     },
     {
       "matches": ["*://*.tiktok.com/*"],
