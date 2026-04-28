@@ -67,7 +67,5 @@ function hideYouTubeShorts() {
   });
 }
 
-// Run on page load and when new content is loaded (e.g., scrolling)
+// Run on page load
 hideYouTubeShorts();
-const observer = new MutationObserver(hideYouTubeShorts);
-observer.observe(document.body, { childList: true, subtree: true });

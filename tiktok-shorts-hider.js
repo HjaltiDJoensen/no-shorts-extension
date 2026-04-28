@@ -20,7 +20,5 @@ function hideTikTokShorts() {
   });
 }
 
-// Run on page load and observe changes
+// Run on page load
 hideTikTokShorts();
-const observer = new MutationObserver(hideTikTokShorts);
-observer.observe(document.body, { childList: true, subtree: true });

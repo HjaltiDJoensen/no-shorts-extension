@@ -19,7 +19,5 @@ function hide9GAGShorts() {
   });
 }
 
-// Run on page load and observe changes
+// Run on page load
 hide9GAGShorts();
-const observer = new MutationObserver(hide9GAGShorts);
-observer.observe(document.body, { childList: true, subtree: true });
