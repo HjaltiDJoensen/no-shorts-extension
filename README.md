@@ -7,8 +7,14 @@ This browser extension hides short video content on YouTube, TikTok, and 9GAG to
 - Hides YouTube Shorts shelf, sidebar tab, and short videos in feed/search
 - Blocks TikTok short video feed
 - Removes video posts from 9GAG
-- Compatible with Chrome, Edge, and Firefox
-- Uses efficient CSS injection for performance
+
+## Compatibility
+
+Compatible with Chrome, Edge, and Firefox
+
+## Performance
+
+Uses efficient CSS injection for performance
 
 ## Installation
 
