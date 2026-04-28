@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "No Shorts Extension",
+  "version": "1.0",
+  "description": "Hides short video content on YouTube, TikTok, and 9GAG",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["youtube-shorts-hider.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://*.tiktok.com/*"],
+      "js": ["tiktok-shorts-hider.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["*://*.9gag.com/*"],
+      "js": ["9gag-shorts-hider.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
