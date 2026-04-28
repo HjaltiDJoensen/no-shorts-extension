@@ -12,7 +12,8 @@ function hideYouTubeShorts() {
       a[href="/shorts"],
       ytd-guide-entry-renderer:has(a[href="/shorts"]),
       a[title="Shorts"],
-      ytd-guide-entry-renderer:has(a[title="Shorts"]) {
+      ytd-guide-entry-renderer:has(a[title="Shorts"]),
+      ytd-reel-shelf-renderer {
         display: none !important;
       }
     `;
@@ -58,9 +59,17 @@ function hideYouTubeShorts() {
       container.style.display = "none";
     }
   });
+
+  // Hide reel shelves (shorts recommendations)
+  const reelShelves = document.querySelectorAll("ytd-reel-shelf-renderer");
+  reelShelves.forEach((shelf) => {
+    shelf.style.cssText = "display: none !important;";
+  });
 }
 
 // Run on page load and when new content is loaded (e.g., scrolling)
-hideYouTubeShorts();
-const observer = new MutationObserver(hideYouTubeShorts);
-observer.observe(document.body, { childList: true, subtree: true });
+document.addEventListener("DOMContentLoaded", () => {
+  hideYouTubeShorts();
+  const observer = new MutationObserver(hideYouTubeShorts);
+  observer.observe(document.body, { childList: true, subtree: true });
+});
